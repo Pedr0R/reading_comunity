@@ -3,8 +3,11 @@ const exphbs     = require('express-handlebars');
 const path       = require('path')
 const { listen } = require('express/lib/application');
 const app        = express();
-const db         = require('./db/connection.js')
-const bodyParser = require('body-parser')
+const db         = require('./db/connection.js');
+const bodyParser = require('body-parser');
+const Book       = require('./models/Book');
+const Sequelize  = require('sequelize')
+const Op         = Sequelize.Op
 
 
 const PORT = 3300;
@@ -36,7 +39,37 @@ db
 
 //routes
 app.get('/', (req, res) => {
-  res.render('index');
+
+  let search = req.query.book;
+  let query = '%'+search+'%';
+
+  if(!search) {
+    Book.findAll({order:[
+      ['createdAt', 'DESC']
+    ]})
+    .then(books => {
+  
+      res.render('index', {
+        books
+      });
+  
+    })
+    .catch(err => console.log(err))
+  }else {
+    Book.findAll({
+      where: {title: {[Op.like]: query}},
+      order:[
+      ['createdAt', 'DESC']
+    ]})
+    .then(books => {
+  
+      res.render('index', {
+        books
+      });
+  
+    })
+    .catch(err => console.log(err))
+  }
 });
 
 //books routes

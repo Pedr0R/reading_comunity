@@ -11,7 +11,7 @@ const Book = db.define('book', {
   user: {
     type: Sequelize.STRING,
   },
-  new: {
+  is_new: {
     type: Sequelize.INTEGER,
   }
 });
