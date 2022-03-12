@@ -15,5 +15,4 @@ Esse é um website responsivo onde leitores podem compartilhar livros entre si.
 
 # Thanks for reading
 
-https://user-images.githubusercontent.com/90324497/158002269-8ba831e6-5348-41e7-8275-8c073b883184.mp4
-
+![image](https://user-images.githubusercontent.com/90324497/158002337-14fc7ea6-9e96-4229-9bd6-5488be12d922.png)
