@@ -24,11 +24,10 @@
             <li class="list-group-item new-book" {{#if dataValues.is_new}}new-book{{/if}}>
               <img src="/img/logo.svg" alt="Book">              
               <h2>{{dataValues.title}}</h2>
-              <p>{{dataValues.author}}</p>
-              <p>{{dataValues.price}}</p>
-              <p>{{dataValues.user}}</p>
+              <p>Autor: {{dataValues.author}}</p>
+              <p>Usuário: {{dataValues.user}}</p>
               <span class="new-book-label">Novo</span>
-              <a class="btn btn-primary">Ver livro</a>
+              <a class="btn btn-primary" href="/books/view/{{dataValues.id}}">Ver livro</a>
             </li>
           {{/each}}
         </ul>

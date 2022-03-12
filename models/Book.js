@@ -13,6 +13,12 @@ const Book = db.define('book', {
   },
   is_new: {
     type: Sequelize.INTEGER,
+  },
+  description: {
+    type: Sequelize.STRING
+  },
+  contact: {
+    type: Sequelize.STRING,
   }
 });
 
