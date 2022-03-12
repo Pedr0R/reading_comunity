@@ -14,5 +14,3 @@ Esse é um website responsivo onde leitores podem compartilhar livros entre si.
 - SQLite!
 
 # Thanks for reading
-
-![image](https://user-images.githubusercontent.com/90324497/158002337-14fc7ea6-9e96-4229-9bd6-5488be12d922.png)
